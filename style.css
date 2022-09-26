@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.flex-container-row{
+    height: 400px;
+    display: flex;
+    background-color: #f4f4f4;
+    /* justify content is used for horizontal alignment (column) */
+    justify-content: space-around; 
+    /* align items is used for vertical alignment. A height has to be specified for the flex container (column) */
+    align-items: end;
+
+    flex-wrap: wrap;
+}
+
+.item-row{
+    /* use flex basis for flex items instead of width */
+    flex-basis: 300px;
+    /* if you want all the flex items to have the same size no matter what */
+    /* flex-grow: 1; */
+    height: 100px;
+    background-color: #254de4;
+    margin: 10px;
+    color: white;
+}
+
+
+.item-row:nth-of-type(1){
+    order: 2;
+    /* the flex-grow property is used to increase the width of the flex item */
+    /* the flex-shrink property is the rate at which the flex items shrink */
+    /* flex-grow: 2;  */
+}
+.item-row:nth-of-type(3) {
+    align-self: start;
+    order: 1;
+    /* flex-grow: 1; */
+}
+.item-row:nth-of-type(2){
+    order: 3;
+    /* flex-grow: 1; */
+}
+
+
+
+/* Styling column items */
+.flex-container-column{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    /* when the flex direction is column, justify-content is used for vertical alignment */
+    justify-content: space-around;
+    /* align items is used for horizontal alignment */
+    align-items: center;
+}
+
+.item-column{
+    width: 100px;
+    height: 100px;
+    background-color: #254de4;
+    margin: 10px;
+    color: white;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
